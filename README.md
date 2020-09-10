@@ -3,16 +3,8 @@ A NitroType bookmarklet that generates accounts.
 
 ## Installation
 Copy and paste the code below into the URL section of a new bookmark.
-
-
-<details>
-  <summary><strong>Tip</strong></summary>
-  <br>
-  <p>Triple-click on the code block below to quickly copy the bookmarklet's contents.</p>
-</details>
-
 ```javascript
-javascript:(async()=>{var b=prompt("Enter base username:"),c=prompt("Enter password:"),d=prompt("Enter the number of accounts:");post=async(a,b)=>(await fetch(a,{method:"POST",mode:"cors",headers:{"Content-Type":"application/x-www-form-urlencoded"},body:b})).json(),alert(`Attempting to generate ${d} accounts... Please wait for the next alert.`);for(var e=0;e<parseInt(d);e++)post("https://www.nitrotype.com/api/register",`acceptPolicy=true&email=&password=${c}&receiveContact=&username=${b+e}`).then(a=>{console.log(a)}).catch(a=>{console.error(a)});alert("Operation complete. Check the console for individual HTTP responses.")})();
+javascript:{let s=document.createElement('script');s.type='text/javascript';s.src='https://cdn.jsdelivr.net/gh/Ray-Adams/NitroType-Account-Generator@latest/account_generator.js';document.body.appendChild(s)}
 ```
 **NOTE**: You can view the beautified file here: [account_generator.js](../master/account_generator.js)
 
