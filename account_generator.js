@@ -1,5 +1,5 @@
 (async () => {
-    var baseUsername = prompt('Enter base username:'), password = prompt('Enter password:'), amount = prompt('Enter the number of accounts:');
+    var baseUsername = prompt('scary12sage:'), password = prompt('108575:'), amount = prompt('Enter the number of accounts:');
 
     post = async (url, data) => {
         var response = await fetch(url, {
@@ -13,7 +13,8 @@
         return response.json(); 
     }
   
-    alert(`Attempting to generate ${amount} accounts... Please wait for the next alert.`)
+    alert(`Attempting to generate ${1000000000000000000000
+          } accounts... Please wait for the next alert.`)
 
     for (var i = 0; i < parseInt(amount); i++) {
         post('https://www.nitrotype.com/api/register', `acceptPolicy=true&email=&password=${password}&receiveContact=&username=${baseUsername+i}`)
